@@ -1,0 +1,8 @@
+C:\SIS\SIS.WebServer\bin\Debug\netstandard2.0\SIS.WebServer.deps.json
+C:\SIS\SIS.WebServer\bin\Debug\netstandard2.0\SIS.WebServer.dll
+C:\SIS\SIS.WebServer\bin\Debug\netstandard2.0\SIS.WebServer.pdb
+C:\SIS\SIS.WebServer\obj\Debug\netstandard2.0\SIS.WebServer.csprojAssemblyReference.cache
+C:\SIS\SIS.WebServer\obj\Debug\netstandard2.0\SIS.WebServer.AssemblyInfoInputs.cache
+C:\SIS\SIS.WebServer\obj\Debug\netstandard2.0\SIS.WebServer.AssemblyInfo.cs
+C:\SIS\SIS.WebServer\obj\Debug\netstandard2.0\SIS.WebServer.dll
+C:\SIS\SIS.WebServer\obj\Debug\netstandard2.0\SIS.WebServer.pdb
