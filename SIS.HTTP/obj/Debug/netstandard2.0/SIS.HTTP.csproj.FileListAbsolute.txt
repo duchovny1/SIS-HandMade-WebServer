@@ -6,3 +6,11 @@ C:\SIS\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.AssemblyInfoInputs.cache
 C:\SIS\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.AssemblyInfo.cs
 C:\SIS\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.dll
 C:\SIS\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.pdb
+C:\Repositories\SIS\SIS-HandMade-WebServer\SIS.HTTP\bin\Debug\netstandard2.0\SIS.HTTP.deps.json
+C:\Repositories\SIS\SIS-HandMade-WebServer\SIS.HTTP\bin\Debug\netstandard2.0\SIS.HTTP.dll
+C:\Repositories\SIS\SIS-HandMade-WebServer\SIS.HTTP\bin\Debug\netstandard2.0\SIS.HTTP.pdb
+C:\Repositories\SIS\SIS-HandMade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.csprojAssemblyReference.cache
+C:\Repositories\SIS\SIS-HandMade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.AssemblyInfoInputs.cache
+C:\Repositories\SIS\SIS-HandMade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.AssemblyInfo.cs
+C:\Repositories\SIS\SIS-HandMade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.dll
+C:\Repositories\SIS\SIS-HandMade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.pdb
