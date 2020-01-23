@@ -67,29 +67,43 @@
 
         }
 
-        private void ParseRequestParameters(string v)
+        private void ParseRequestParameters(string requestBody)
         {
             throw new NotImplementedException();
         }
 
-        private void ParseHeaders(IEnumerable<string> enumerable)
+        private void ParseHeaders(IEnumerable<string> plainHeaders)
         {
-            throw new NotImplementedException();
+            plainHeaders.Select(plainHeader => plainHeader
+                .Split(new[]{':',' '}, StringSplitOptions.RemoveEmptyEntries))
+                .ToList()
+                .ForEach(headerKvp => this.Headers.AddHeader(
+                    new HttpHeader(headerKvp[0], headerKvp[1])));
         }
 
         private void ParseRequestPath()
         {
-            throw new NotImplementedException();
+            this.Path = this.Url.Split('?')[0];
         }
 
         private void ParseUrlMethod(string[] requestLineParams)
         {
-            throw new NotImplementedException();
+            this.Url = requestLineParams[1];
         }
 
         private void ParseRequestMethod(string[] requestLineParams)
         {
             throw new NotImplementedException();
+        }
+
+        private void ParseRequestQueryParameters()
+        {
+
+        }
+
+        private void ParseRequestFormDataParamets()
+        {
+
         }
     }
 }

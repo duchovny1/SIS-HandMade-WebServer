@@ -179,23 +179,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\rptlonfire\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SIS\\SIS.HTTP\\SIS.HTTP.csproj",
+      "projectUniqueName": "C:\\Repositories\\SIS\\SIS-HandMade-WebServer\\SIS.HTTP\\SIS.HTTP.csproj",
       "projectName": "SIS.HTTP",
-      "projectPath": "C:\\SIS\\SIS.HTTP\\SIS.HTTP.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\SIS\\SIS.HTTP\\obj\\",
+      "projectPath": "C:\\Repositories\\SIS\\SIS-HandMade-WebServer\\SIS.HTTP\\SIS.HTTP.csproj",
+      "packagesPath": "C:\\Users\\rptlonfire\\.nuget\\packages\\",
+      "outputPath": "C:\\Repositories\\SIS\\SIS-HandMade-WebServer\\SIS.HTTP\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rptlonfire\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -236,7 +232,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

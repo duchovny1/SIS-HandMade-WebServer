@@ -12,7 +12,6 @@
         Dictionary<string, object> FormData { get; }
         Dictionary<string, object> QueryData { get; }
         IHttpHeaderCollection Headers { get; }
-
         HttpRequestMethod RequestMethod { get; }
 
 
