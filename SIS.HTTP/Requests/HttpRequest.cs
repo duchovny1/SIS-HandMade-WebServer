@@ -69,7 +69,8 @@
 
         private void ParseRequestParameters(string requestBody)
         {
-            throw new NotImplementedException();
+            this.ParseRequestQueryParameters();
+            this.ParseRequestFormDataParamets(requestBody);
         }
 
         private void ParseHeaders(IEnumerable<string> plainHeaders)
@@ -93,17 +94,35 @@
 
         private void ParseRequestMethod(string[] requestLineParams)
         {
-            throw new NotImplementedException();
+            bool parseResult = HttpRequestMethod.TryParse(requestLineParams[0], true,
+                 out HttpRequestMethod result);
+
+            if (!parseResult)
+            {
+                throw new BadRequestException();
+            }
+
+            this.RequestMethod = result;
         }
 
         private void ParseRequestQueryParameters()
         {
-
+            this.Url.Split('?')[1]
+                .Split('&')
+                .Select(queryParameter => queryParameter.Split('='))
+                .ToList()
+                .ForEach(queryParameterKvp => this.QueryData[queryParameterKvp[0]] =
+                queryParameterKvp[1]);
         }
 
-        private void ParseRequestFormDataParamets()
+        private void ParseRequestFormDataParamets(string requestBody)
         {
-
+            requestBody.Split('&')
+                .Select(bodyParamer => bodyParamer.Split('='))
+                .ToList()
+                .ForEach(bodyParamerKvp => this.FormData[bodyParamerKvp[0]] =
+                bodyParamerKvp[1]);
+            //rb.Split(&).Select(x => x.Split(=)).ToList().ForEach(kvp => this.BodyList[key] == value)
         }
     }
 }
