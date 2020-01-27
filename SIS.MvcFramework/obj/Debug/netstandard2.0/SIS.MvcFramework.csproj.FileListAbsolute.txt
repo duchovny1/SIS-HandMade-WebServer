@@ -1,0 +1,7 @@
+C:\Repos\SIS2\SIS2\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.MvcFramework.deps.json
+C:\Repos\SIS2\SIS2\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.MvcFramework.dll
+C:\Repos\SIS2\SIS2\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.MvcFramework.pdb
+C:\Repos\SIS2\SIS2\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.AssemblyInfoInputs.cache
+C:\Repos\SIS2\SIS2\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.AssemblyInfo.cs
+C:\Repos\SIS2\SIS2\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.dll
+C:\Repos\SIS2\SIS2\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.pdb

@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\SIS-Handmade-WebServer\\SIS.HTTP\\SIS.HTTP.csproj",
-      "projectName": "SIS.HTTP",
-      "projectPath": "C:\\Repos\\SIS-Handmade-WebServer\\SIS.HTTP\\SIS.HTTP.csproj",
+      "projectUniqueName": "C:\\Repos\\SIS-Handmade-WebServer\\SIS.MvcFramework\\SIS.MvcFramework.csproj",
+      "projectName": "SIS.MvcFramework",
+      "projectPath": "C:\\Repos\\SIS-Handmade-WebServer\\SIS.MvcFramework\\SIS.MvcFramework.csproj",
       "packagesPath": "C:\\Repos\\packages",
-      "outputPath": "C:\\Repos\\SIS-Handmade-WebServer\\SIS.HTTP\\obj\\",
+      "outputPath": "C:\\Repos\\SIS-Handmade-WebServer\\SIS.MvcFramework\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Repos\\NuGet.Config",
