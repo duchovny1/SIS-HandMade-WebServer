@@ -15,7 +15,6 @@
         {
             tcpListener = new TcpListener(IPAddress.Loopback, port);
             //StartAsync().GetAwaiter().GetResult();
-           
         }
 
         public async Task ResetAsync()
@@ -32,7 +31,7 @@
             {
                 TcpClient tcpClient = await tcpListener.AcceptTcpClientAsync();
 
-                Task.Run(() => ProcessClientAsync(tcpClient));
+                await Task.Run(() => ProcessClientAsync(tcpClient));
 
 
             }

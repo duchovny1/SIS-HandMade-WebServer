@@ -36,17 +36,17 @@ namespace SIS.HTTP
                 _ => "HTTP/1.1"
             };
 
-            responseAsString.AppendLine($"{httpVersionAsString} " +
+            responseAsString.Append($"{httpVersionAsString} " +
                 $"{(int)StatusCode} {this.StatusCode}" + HttpConstants.NewLine);
 
 
             foreach (var header in Headers)
             {
-                responseAsString.AppendLine(header.ToString() + HttpConstants.NewLine);
+                responseAsString.Append(header.ToString() + HttpConstants.NewLine);
             }
 
 
-            responseAsString.AppendLine(HttpConstants.NewLine);
+            responseAsString.Append(HttpConstants.NewLine);
 
             return responseAsString.ToString();
         }
