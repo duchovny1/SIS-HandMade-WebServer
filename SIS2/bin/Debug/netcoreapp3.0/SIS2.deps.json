@@ -21,6 +21,9 @@
         }
       },
       "SIS.MvcFramework/1.0.0": {
+        "dependencies": {
+          "SIS.HTTP": "1.0.0"
+        },
         "runtime": {
           "SIS.MvcFramework.dll": {}
         }

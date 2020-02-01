@@ -6,10 +6,10 @@ namespace SIS.HTTP
     public class HttpResponse
     {
         public HttpResponse(StatusCode code, byte[] body)
+            : this()
         {
-            this.HttpVersion = HttpVersion.Http11;
+            
             this.StatusCode = code;
-            this.Headers = new List<Header>();
             this.Content = body;
 
             if (body?.Length > 0)
@@ -17,12 +17,20 @@ namespace SIS.HTTP
                 this.Headers.Add(new Header("Content-Length", body.Length.ToString()));
             }
         }
+
+        internal HttpResponse()
+        {
+            this.HttpVersion = HttpVersion.Http11;
+            this.Headers = new List<Header>();
+            this.Cookies = new List<ResponseCookie>();
+        }
         public HttpVersion HttpVersion { get; set; }
 
         public StatusCode StatusCode { get; set; }
 
         public IList<Header> Headers { get; set; }
 
+        public IList<ResponseCookie> Cookies { get; set; }
         public byte[] Content { get; set; }
 
         public override string ToString()
@@ -45,6 +53,10 @@ namespace SIS.HTTP
                 responseAsString.Append(header.ToString() + HttpConstants.NewLine);
             }
 
+            foreach (var cookie in Cookies)
+            {
+                responseAsString.Append($"Set-Cookie: " + cookie.ToString() + HttpConstants.NewLine);
+            }
 
             responseAsString.Append(HttpConstants.NewLine);
 
