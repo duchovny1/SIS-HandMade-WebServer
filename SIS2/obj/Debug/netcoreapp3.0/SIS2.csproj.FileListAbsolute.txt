@@ -30,3 +30,4 @@ C:\Repos\SIS-Handmade-WebServer\SIS2\obj\Debug\netcoreapp3.0\SIS2.AssemblyInfo.c
 C:\Repos\SIS-Handmade-WebServer\SIS2\obj\Debug\netcoreapp3.0\SIS2.csproj.CopyComplete
 C:\Repos\SIS-Handmade-WebServer\SIS2\obj\Debug\netcoreapp3.0\SIS2.dll
 C:\Repos\SIS-Handmade-WebServer\SIS2\obj\Debug\netcoreapp3.0\SIS2.pdb
+C:\Repos\SIS-Handmade-WebServer\SIS2\bin\Debug\netcoreapp3.0\wwwroot\favicon.ico

@@ -8,7 +8,7 @@ namespace SIS.HTTP
     {
         public Cookie(string name, string value)
         {
-            this.Name - name;
+            this.Name = name;
             this.Value = value;
         }
         public string Name { get; set; }

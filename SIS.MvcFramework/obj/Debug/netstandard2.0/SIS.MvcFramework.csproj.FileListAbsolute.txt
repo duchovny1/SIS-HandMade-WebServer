@@ -13,3 +13,6 @@ C:\Repos\SIS-Handmade-WebServer\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.Mv
 C:\Repos\SIS-Handmade-WebServer\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.AssemblyInfo.cs
 C:\Repos\SIS-Handmade-WebServer\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.dll
 C:\Repos\SIS-Handmade-WebServer\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.pdb
+C:\Repos\SIS-Handmade-WebServer\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.HTTP.dll
+C:\Repos\SIS-Handmade-WebServer\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.HTTP.pdb
+C:\Repos\SIS-Handmade-WebServer\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.csproj.CopyComplete

@@ -13,3 +13,4 @@ C:\Repos\SIS-Handmade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.Assem
 C:\Repos\SIS-Handmade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.AssemblyInfo.cs
 C:\Repos\SIS-Handmade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.dll
 C:\Repos\SIS-Handmade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.pdb
+C:\Repos\SIS-Handmade-WebServer\SIS.HTTP\obj\Debug\netstandard2.0\SIS.HTTP.csprojAssemblyReference.cache
