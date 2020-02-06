@@ -1,7 +1,7 @@
 ﻿namespace SIS2
 {
     using SIS.HTTP;
-    
+
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -28,7 +28,7 @@
         private static HttpResponse FavIcon(HttpRequest request)
         {
 
-            
+
             var byteContent = File.ReadAllBytes("wwwroot/favicon.ico");
 
             return new FileResponse(byteContent, "image/x-icon");
@@ -36,12 +36,17 @@
 
         public static HttpResponse Index(HttpRequest request)
         {
-            string content = "<h1>index page</h1>";
+            var username = request.SessionData.ContainsKey("Username")
+                                  ? request.SessionData["Username"] : "Anonymous";
+
+            string content = $"<h1>index page,Hello {username}</h1>";
             return new HtmlResponse(content);
         }
 
         public static HttpResponse Login(HttpRequest request)
         {
+            request.SessionData["Username"] = "Pesho";
+
             string content = "<h1>login page</h1>";
             return new HtmlResponse(content);
         }

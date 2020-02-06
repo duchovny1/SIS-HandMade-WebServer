@@ -14,13 +14,13 @@
     {
         private readonly TcpListener tcpListener;
         private readonly IList<Route> routeTable;
-        private readonly IDictionary<string, IDictionary<string, string>> sessions;
+        private IDictionary<string, Dictionary<string, string>> sessions;
         public HttpServer(int port, IList<Route> routeTable)
         {
             tcpListener = new TcpListener(IPAddress.Loopback, port);
             this.routeTable = routeTable;
+            this.sessions = new Dictionary<string, Dictionary<string, string>>();
             StartAsync().GetAwaiter().GetResult();
-            sessions = new Dictionary<string, IDictionary<string, string>>();
         }
 
         public async Task ResetAsync()
@@ -62,16 +62,20 @@
 
                 string requestAsString = Encoding.UTF8.GetString(requestBytes, 0, requestBytes.Length);
 
-                    var request = new HttpRequest(requestAsString);
-                    var sessionCookie = request.Cookies
-                       .FirstOrDefault(x => x.Name == HttpConstants.SessionIdCookieName);
-                    if(sessionCookie != null && this.sessions.ContainsKey(sessionCookie.Value))
+                var request = new HttpRequest(requestAsString);
+                string newSessionId = null;
+                var sessionCookie = request.Cookies
+                   .FirstOrDefault(x => x.Name == HttpConstants.SessionIdCookieName);
+                if (sessionCookie != null && this.sessions.ContainsKey(sessionCookie.Value))
                 {
                     request.SessionData = this.sessions[sessionCookie.Value];
                 }
                 else
                 {
-                    
+                    newSessionId = Guid.NewGuid().ToString();
+                    var dictionary = new Dictionary<string, string>();
+                    this.sessions.Add(newSessionId, dictionary);
+                    request.SessionData = dictionary;
                 }
 
                 Console.WriteLine($"{request.Method} {request.Path}");
@@ -80,7 +84,7 @@
                 && x.Path == request.Path);
 
                 HttpResponse response;
-                string newSessionId = null;
+                
 
                 if (route == null)
                 {
@@ -89,25 +93,22 @@
                 else
                 {
                     response = route.Action(request);
-                    var dictionary = new Dictionary<string, string>();
-                     newSessionId = Guid.NewGuid().ToString();
-                    this.sessions.Add(newSessionId, dictionary);
-                    request.SessionData = dictionary;
                 }
+
                 response.Headers.Add(new Header("Server", "SoftUni/1.1"));
 
 
-               
+
                 if (newSessionId != null)
                 {
-                  
+
                     response.Cookies.Add(new ResponseCookie(HttpConstants.SessionIdCookieName,
                         newSessionId)
-                    { HttpOnly = true, MaxAge = 30*3600 });
+                    { HttpOnly = true, MaxAge = 30 * 3600 });
                 }
                 response.Headers.Add(new Header("Content-type", "text/html"));
-               
-               
+
+
 
                 //string responeString = "HTTP/1.1 200 OK" + HttpConstants.NewLine
                 //    + "Server: SoftUni1.1" + HttpConstants.NewLine
