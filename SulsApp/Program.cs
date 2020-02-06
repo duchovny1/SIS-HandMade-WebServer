@@ -1,12 +1,19 @@
-﻿using System;
+﻿using SIS.HTTP;
+using SIS2;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SulsApp
 {
-    class Program
+    public static class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var db = new ApplicationDbContext(); 
         }
     }
 }

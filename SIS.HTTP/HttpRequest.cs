@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using System.Web;
 
     public class HttpRequest
     {
@@ -10,23 +11,23 @@
         {
             this.Headers = new List<Header>();
             this.Cookies = new List<Cookie>();
+            this.SessionData = new Dictionary<string, string>();
 
 
-
-            var lines = httpRequestAsString.Split(new string[] { HttpConstants.NewLine }, 
+            var lines = httpRequestAsString.Split(new string[] { HttpConstants.NewLine },
                 StringSplitOptions.None);
 
             var httpInfoHeader = lines[0];
             var infoHeaderParts = httpInfoHeader.Split(' ');
 
-            if(infoHeaderParts.Length != 3)
+            if (infoHeaderParts.Length != 3)
             {
                 throw new HttpServerException("Invalid HTTP header line.");
             }
 
             var httpMethod = infoHeaderParts[0];
             this.Method = httpMethod switch
-            { 
+            {
                 "POST" => HttpMethodType.Post,
                 "GET" => HttpMethodType.Get,
                 "PUT" => HttpMethodType.Put,
@@ -53,18 +54,18 @@
             for (int i = 1; i < lines.Length; i++)
             {
                 var line = lines[i];
-                if(string.IsNullOrWhiteSpace(line))
+                if (string.IsNullOrWhiteSpace(line))
                 {
                     isInHeader = false;
                     continue;
                 }
 
-                if(isInHeader)
+                if (isInHeader)
                 {
                     var headerParts = line.Split(new string[] { ": " }, 2
                     , StringSplitOptions.None);
 
-                    if(headerParts.Length != 2)
+                    if (headerParts.Length != 2)
                     {
                         throw new HttpServerException($"Invalid header: {line}");
                     }
@@ -73,7 +74,7 @@
                     this.Headers.Add(header);
 
 
-                    if(headerParts[0] == "Cookie")
+                    if (headerParts[0] == "Cookie")
                     {
                         var cookiesAsString = headerParts[1];
                         var cookies = cookiesAsString.Split(new string[] { ": " },
@@ -83,7 +84,7 @@
                         {
                             var cookieParts = cookieAsString.Split(new char[] { '=' }, 2);
 
-                            if(cookieParts.Length == 2)
+                            if (cookieParts.Length == 2)
                             {
                                 this.Cookies.Add(new Cookie(cookieParts[0], cookieParts[1]));
                             }
@@ -94,6 +95,19 @@
                 {
                     bodyBuilder.AppendLine(line);
                 }
+            }
+
+            this.Body = (bodyBuilder.ToString().TrimEnd('\r', '\n'));
+            var bodyParts = this.Body.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+            this.FormData = new Dictionary<string, string>();
+
+            foreach (var part in bodyParts)
+            {
+                var parameterParts = part.Split(new char[] { '=' }, 2);
+
+                this.FormData[HttpUtility.UrlEncode(parameterParts[0])] = HttpUtility.UrlEncode(parameterParts[1]);
+
+
 
             }
 
@@ -108,6 +122,8 @@
         public IList<Cookie> Cookies { get; set; }
 
         public string Body { get; set; }
+
+        public IDictionary<string, string> FormData { get; set; }
 
         public IDictionary<string, string> SessionData { get; set; }
     }

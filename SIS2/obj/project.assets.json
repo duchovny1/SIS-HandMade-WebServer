@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {
+    ".NETCoreApp,Version=v3.1": {
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
         "type": "package",
         "compile": {
@@ -103,7 +103,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -155,10 +155,10 @@
           "Microsoft.Extensions.Primitives": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Caching.Memory/3.1.1": {
@@ -170,10 +170,10 @@
           "Microsoft.Extensions.Options": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/3.1.1": {
@@ -182,10 +182,10 @@
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration.Abstractions/3.1.1": {
@@ -194,10 +194,10 @@
           "Microsoft.Extensions.Primitives": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration.Binder/3.1.1": {
@@ -206,10 +206,10 @@
           "Microsoft.Extensions.Configuration": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/3.1.1": {
@@ -218,10 +218,10 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.1": {
@@ -242,10 +242,10 @@
           "Microsoft.Extensions.Options": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Logging.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Logging.dll": {}
         }
       },
       "Microsoft.Extensions.Logging.Abstractions/3.1.1": {
@@ -261,27 +261,22 @@
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.1",
-          "Microsoft.Extensions.Primitives": "3.1.1",
-          "System.ComponentModel.Annotations": "4.7.0"
+          "Microsoft.Extensions.Primitives": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Options.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Options.dll": {}
         }
       },
       "Microsoft.Extensions.Primitives/3.1.1": {
         "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.2",
-          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
-        },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
         }
       },
       "Microsoft.Identity.Client/3.0.8": {
@@ -676,15 +671,6 @@
           "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
-      "System.Memory/4.5.2": {
-        "type": "package",
-        "compile": {
-          "ref/netcoreapp2.1/_._": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.1/_._": {}
-        }
-      },
       "System.Net.NameResolution/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -905,10 +891,10 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.7.0": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -1316,6 +1302,21 @@
         },
         "runtime": {
           "bin/placeholder/SIS.MvcFramework.dll": {}
+        }
+      },
+      "SulsApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.1",
+          "SIS.HTTP": "1.0.0",
+          "SIS.MvcFramework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SulsApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SulsApp.dll": {}
         }
       }
     }
@@ -3036,27 +3037,6 @@
         "system.linq.nuspec"
       ]
     },
-    "System.Memory/4.5.2": {
-      "sha512": "fvq1GNmUFwbKv+aLVYYdgu/+gc8Nu9oFujOxIjPrsf+meis9JBzTPDL6aP/eeGOz9yPj6rRLUbOjKMpsMEWpNg==",
-      "type": "package",
-      "path": "system.memory/4.5.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp2.1/_._",
-        "lib/netstandard1.1/System.Memory.dll",
-        "lib/netstandard1.1/System.Memory.xml",
-        "lib/netstandard2.0/System.Memory.dll",
-        "lib/netstandard2.0/System.Memory.xml",
-        "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.2.nupkg.sha512",
-        "system.memory.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Net.NameResolution/4.3.0": {
       "sha512": "AFYl08R7MrsrEjqpQWTZWBadqXyTzNDaWpMqyxhb0d6sGhV6xMDKueuBXlLL30gz+DIRY6MpdgnHWlCh5wmq9w==",
       "type": "package",
@@ -3752,10 +3732,10 @@
         "version.txt"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.7.0": {
-      "sha512": "IpU1lcHz8/09yDr9N+Juc7SCgNUz+RohkCQI+KsWKR67XxpFr8Z6c8t1iENCXZuRuNCc4HBwme/MDHNVCwyAKg==",
+    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "sha512": "YrzNWduCDHhUaSRBxHxL11UkM2fD6y8hITHis4/LbQZ6vj3vdRjoH3IoPWWC9uDXK2wHIqn+b5gv1Np/VKyM1g==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.7.0",
+      "path": "system.runtime.compilerservices.unsafe/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3767,11 +3747,13 @@
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/uap10.0.16300/_._",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
+        "ref/uap10.0.16300/_._",
+        "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -5052,15 +5034,21 @@
       "type": "project",
       "path": "../SIS.MvcFramework/SIS.MvcFramework.csproj",
       "msbuildProject": "../SIS.MvcFramework/SIS.MvcFramework.csproj"
+    },
+    "SulsApp/1.0.0": {
+      "type": "project",
+      "path": "../SulsApp/SulsApp.csproj",
+      "msbuildProject": "../SulsApp/SulsApp.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": [
+    ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore.Design >= 3.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.1",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.1",
       "SIS.HTTP >= 1.0.0",
-      "SIS.MvcFramework >= 1.0.0"
+      "SIS.MvcFramework >= 1.0.0",
+      "SulsApp >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5081,20 +5069,23 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.0"
+        "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
           "projectReferences": {
             "C:\\Repos\\SIS-Handmade-WebServer\\SIS.HTTP\\SIS.HTTP.csproj": {
               "projectPath": "C:\\Repos\\SIS-Handmade-WebServer\\SIS.HTTP\\SIS.HTTP.csproj"
             },
             "C:\\Repos\\SIS-Handmade-WebServer\\SIS.MvcFramework\\SIS.MvcFramework.csproj": {
               "projectPath": "C:\\Repos\\SIS-Handmade-WebServer\\SIS.MvcFramework\\SIS.MvcFramework.csproj"
+            },
+            "C:\\Repos\\SIS-Handmade-WebServer\\SulsApp\\SulsApp.csproj": {
+              "projectPath": "C:\\Repos\\SIS-Handmade-WebServer\\SulsApp\\SulsApp.csproj"
             }
           }
         }
@@ -5106,11 +5097,9 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.0": {
+      "netcoreapp3.1": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.1, )"
           },
@@ -5119,8 +5108,6 @@
             "version": "[3.1.1, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.1, )"
           }
@@ -5135,24 +5122,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.0.1, 3.0.1]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.0.2, 3.0.2]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
