@@ -1,0 +1,16 @@
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SulsApp.exe
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SulsApp.deps.json
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SulsApp.runtimeconfig.json
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SulsApp.runtimeconfig.dev.json
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SulsApp.dll
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SulsApp.pdb
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SIS.HTTP.dll
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SIS.MvcFramework.dll
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SIS.HTTP.pdb
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\SIS.MvcFramework.pdb
+C:\Repos\SIS-Handmade-WebServer\SulsApp\obj\Debug\netcoreapp3.1\SulsApp.csprojAssemblyReference.cache
+C:\Repos\SIS-Handmade-WebServer\SulsApp\obj\Debug\netcoreapp3.1\SulsApp.AssemblyInfoInputs.cache
+C:\Repos\SIS-Handmade-WebServer\SulsApp\obj\Debug\netcoreapp3.1\SulsApp.AssemblyInfo.cs
+C:\Repos\SIS-Handmade-WebServer\SulsApp\obj\Debug\netcoreapp3.1\SulsApp.csproj.CopyComplete
+C:\Repos\SIS-Handmade-WebServer\SulsApp\obj\Debug\netcoreapp3.1\SulsApp.dll
+C:\Repos\SIS-Handmade-WebServer\SulsApp\obj\Debug\netcoreapp3.1\SulsApp.pdb

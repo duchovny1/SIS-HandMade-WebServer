@@ -20,9 +20,10 @@
             routeTable.Add(new Route(HttpMethodType.Post, "/users/login", DoLogin));
             routeTable.Add(new Route(HttpMethodType.Get, "/contact", Contact));
             routeTable.Add(new Route(HttpMethodType.Get, "/favicon.ico", FavIcon));
+            routeTable.Add(new Route(HttpMethodType.Get, "/headers", Headers));
 
             var httpServer = new HttpServer(1234, routeTable);
-            await httpServer.StartAsync();
+             await httpServer.StartAsync();
         }
 
         private static HttpResponse FavIcon(HttpRequest request)
@@ -61,6 +62,34 @@
         {
             string content = "<h1>contact page</h1>";
             return new HtmlResponse(content);
+        }
+
+        public static HttpResponse Headers(HttpRequest request)
+        {
+
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("<table border-collapse: collapse border: 1px solid black>");
+            sb.AppendLine("<tr>");
+            sb.AppendLine("<th border: 1px solid black>Key</th>");
+            sb.AppendLine("<th border: 1px solid black>Values</th>");
+            sb.AppendLine("</tr>");
+
+            foreach (var header in request.Headers)
+
+            {
+                sb.AppendLine("<tr>");
+
+                sb.AppendLine($"<td border: 1px solid black>{header.Name}</td>");
+                sb.AppendLine($"<td border: 1px solid black>{header.Value}</td>");
+                sb.AppendLine("</tr>");
+            }
+
+
+            sb.AppendLine("</table>");
+
+
+            return new HtmlResponse(sb.ToString());
         }
     }
 }

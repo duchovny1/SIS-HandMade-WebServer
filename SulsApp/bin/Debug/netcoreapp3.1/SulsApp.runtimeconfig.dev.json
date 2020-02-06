@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\rptlonfire\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Repos\\packages"
+    ]
+  }
+}

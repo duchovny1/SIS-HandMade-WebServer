@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SulsApp/1.0.0": {
+        "dependencies": {
+          "SIS.HTTP": "1.0.0",
+          "SIS.MvcFramework": "1.0.0"
+        },
+        "runtime": {
+          "SulsApp.dll": {}
+        }
+      },
+      "SIS.HTTP/1.0.0": {
+        "runtime": {
+          "SIS.HTTP.dll": {}
+        }
+      },
+      "SIS.MvcFramework/1.0.0": {
+        "dependencies": {
+          "SIS.HTTP": "1.0.0"
+        },
+        "runtime": {
+          "SIS.MvcFramework.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SulsApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SIS.HTTP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SIS.MvcFramework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
