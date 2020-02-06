@@ -11,6 +11,8 @@
             this.Headers = new List<Header>();
             this.Cookies = new List<Cookie>();
 
+
+
             var lines = httpRequestAsString.Split(new string[] { HttpConstants.NewLine }, 
                 StringSplitOptions.None);
 
