@@ -5,6 +5,10 @@ namespace SulsApp.Models
 {
     public class Submission
     {
+        public Submission()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
         public string Id { get; set; }
 
 
@@ -23,8 +27,5 @@ namespace SulsApp.Models
         public string UserId { get; set; }
 
         public virtual User User { get; set; }
-
-
-
     }
 }

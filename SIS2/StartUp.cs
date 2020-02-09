@@ -22,7 +22,7 @@
 
             routeTable.Add(new Route(HttpMethodType.Get, "/", Index));
             routeTable.Add(new Route(HttpMethodType.Post, "Tweets/Create", CreatTweet));
-            routeTable.Add(new Route(HttpMethodType.Get, "/", Index));
+            routeTable.Add(new Route(HttpMethodType.Get, "/favicon.ico", FavIcon));
 
             var httpServer = new HttpServer(1234, routeTable);
             await httpServer.StartAsync();
@@ -55,6 +55,7 @@
         {
             var username = request.SessionData.ContainsKey("Username")
                                   ? request.SessionData["Username"] : "Anonymous";
+
             var db = new ApplicationDbContext();
 
             var tweets = db.Tweets.Select(x => new

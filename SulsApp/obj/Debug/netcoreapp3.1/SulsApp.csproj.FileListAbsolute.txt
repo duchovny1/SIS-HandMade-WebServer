@@ -46,3 +46,4 @@ C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\runtimes\win-x86
 C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Repos\SIS-Handmade-WebServer\SulsApp\bin\Debug\netcoreapp3.1\Views\Home\Index.html

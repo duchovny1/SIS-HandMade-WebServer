@@ -54,6 +54,7 @@
             for (int i = 1; i < lines.Length; i++)
             {
                 var line = lines[i];
+
                 if (string.IsNullOrWhiteSpace(line))
                 {
                     isInHeader = false;
@@ -101,16 +102,18 @@
             var bodyParts = this.Body.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
             this.FormData = new Dictionary<string, string>();
 
-            foreach (var part in bodyParts)
+            if (bodyParts.Length != 0)
             {
-                var parameterParts = part.Split(new char[] { '=' }, 2);
 
-                this.FormData[HttpUtility.UrlEncode(parameterParts[0])] = HttpUtility.UrlEncode(parameterParts[1]);
+                foreach (var part in bodyParts)
+                {
+                    var parameterParts = part.Split(new char[] { '=' }, 2);
+
+                    this.FormData[HttpUtility.UrlEncode(parameterParts[0])] = HttpUtility.UrlEncode(parameterParts[1]);
 
 
-
+                }
             }
-
         }
         public HttpMethodType Method { get; set; }
 
