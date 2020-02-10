@@ -55,9 +55,10 @@
             {
                 var line = lines[i];
 
-                if (string.IsNullOrWhiteSpace(line))
+                if (string.IsNullOrEmpty(line))
                 {
                     isInHeader = false;
+                    i++; // must refactor
                     continue;
                 }
 
@@ -102,18 +103,15 @@
             var bodyParts = this.Body.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
             this.FormData = new Dictionary<string, string>();
 
-            if (bodyParts.Length != 0)
+            foreach (var part in bodyParts)
             {
+                var parameterParts = part.Split(new char[] { '=' }, 2);
 
-                foreach (var part in bodyParts)
-                {
-                    var parameterParts = part.Split(new char[] { '=' }, 2);
-
-                    this.FormData[HttpUtility.UrlEncode(parameterParts[0])] = HttpUtility.UrlEncode(parameterParts[1]);
+                this.FormData[HttpUtility.UrlEncode(parameterParts[0])] = HttpUtility.UrlEncode(parameterParts[1]);
 
 
-                }
             }
+
         }
         public HttpMethodType Method { get; set; }
 
