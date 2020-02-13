@@ -15,9 +15,7 @@ namespace SulsApp
             
 
             routeTable.Add(new Route(HttpMethodType.Get, "/", new HomeController().Index));
-            routeTable.Add(new Route(HttpMethodType.Get, "/css/bootstrap.min.css", new StaticFileController().BootStrap));
-            routeTable.Add(new Route(HttpMethodType.Get, "/css/site.css", new StaticFileController().Site));
-            routeTable.Add(new Route(HttpMethodType.Get, "/css/reset.css", new StaticFileController().Reset));
+            
             routeTable.Add(new Route(HttpMethodType.Get, "/Users/Login", new UsersController().Login));
             routeTable.Add(new Route(HttpMethodType.Get, "/Users/Register", new UsersController().Register));
         }

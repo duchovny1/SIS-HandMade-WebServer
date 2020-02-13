@@ -14,10 +14,10 @@ namespace SIS.MvcFramework
         public string GetHtml(string template, object model)
         {
             var methodCode = PrepareCSharpCode(template);
-            var typeName = model.GetType().FullName;
-            if (model.GetType().IsGenericType)
+            var typeName = model?.GetType().FullName ?? "";
+            if (model?.GetType().IsGenericType == true)
             {
-                typeName = model.GetType().Name.Replace("`1", "") + "<" 
+                typeName = model.GetType().Name.Replace("`1", "") + "<"
                     + model.GetType().GenericTypeArguments.First() + ">";
             }
             string code = $@"using system;
@@ -30,9 +30,9 @@ namespace AppViewNameSpace
        {{
               public string GetHtml(object model)
               {{
-                   var Model = model as {model.GetType().FullName};
+                   var Model = model as {typeName};
                    var html = new StringBuilder();
-
+                   object User = null;
                     {methodCode}
 
                     return html.ToString();
@@ -57,8 +57,13 @@ namespace AppViewNameSpace
                    )
                 )
                 .AddReferences(MetadataReference.CreateFromFile(typeof(IView).Assembly.Location))
-                .AddReferences(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
-                .AddReferences(MetadataReference.CreateFromFile(model.GetType().Assembly.Location));
+                .AddReferences(MetadataReference.CreateFromFile(typeof(object).Assembly.Location));
+            if (model != null)
+            {
+
+                compilation = compilation.AddReferences(MetadataReference.CreateFromFile(model.GetType().Assembly.Location));
+            }
+
             var libraries = Assembly.Load(new AssemblyName("netstandard")).GetReferencedAssemblies();
 
             foreach (var library in libraries)
@@ -119,7 +124,7 @@ namespace AppViewNameSpace
                         var cSharpAndEndOfLine = line.Substring(atLocation + 1);
                         var cSharpExpression = cSharpExpressionRegex.Match(cSharpAndEndOfLine);
                         currentCSharpLine.Append(cSharpExpression.Value + " + @\"");
-                       var after = cSharpAndEndOfLine.Substring(cSharpAndEndOfLine.Length);
+                        var after = cSharpAndEndOfLine.Substring(cSharpAndEndOfLine.Length);
                         line = after;
                         //before
                         //csharp code => + c# code + 
@@ -128,7 +133,7 @@ namespace AppViewNameSpace
                     currentCSharpLine.Append(line.Replace("\"", "\"\"") + "\");");
                     cSharpCode.AppendLine(currentCSharpLine.ToString());
                 }
-                
+
 
             }
 

@@ -81,7 +81,7 @@
                 Console.WriteLine($"{request.Method} {request.Path}");
 
                 var route = this.routeTable.FirstOrDefault(x => x.HttpMethod == request.Method
-                && x.Path == request.Path);
+                && x.Path.ToLower() == request.Path.ToLower());
 
                 HttpResponse response;
                 
